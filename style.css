@@ -1,0 +1,637 @@
+/* ======================================= */
+/* YENİ RENK PALETİ: PASTEL VE ESTETİK STİL */
+/* ======================================= */
+
+:root {
+    --color-pink: #FAD9E6; /* Pembe */
+    --color-green: #CDEAC0; /* Açık Yeşil */
+    --color-blue: #A0CED9; /* Gök Mavisi */
+    --color-yellow-cream: #FCF6BD; /* Sarımsı Krem */
+    --color-text-dark: #444; /* Koyu Metin */
+    --color-text-light: #fff; /* Açık Metin */
+    --color-shadow: rgba(0, 0, 0, 0.08); /* Hafif gölge */
+    --color-header-bg: #FCF6BD; /* Header için açık renk */
+    --color-accent-text: #666; /* Vurgulu metin için daha koyu gri */
+}
+
+/* ======================================= */
+/* FULL-PAGE SCROLL SNAPPING STİLİ */
+/* ======================================= */
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll; 
+}
+
+body.full-page-snap {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; 
+    font-family: 'Quicksand', sans-serif; /* Yeni ana font */
+    color: var(--color-text-dark);
+    line-height: 1.7; /* Daha rahat okunabilirlik */
+    background-color: var(--color-yellow-cream); /* Genel arka plan */
+}
+
+/* Tüm section'lar ve footer tam ekran yüksekliğinde olmalı ve kaydırma hizalamasına sahip olmalı */
+section, footer {
+    min-height: 100vh; /* Tam viewport yüksekliği */
+    scroll-snap-align: start;
+    padding-top: 80px; /* Header altından başlama boşluğu */
+    padding-bottom: 50px;
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    position: relative; /* Z-index için */
+}
+
+/* Header'ın scroll snap'ten etkilenmemesi için */
+header {
+    position: fixed; /* sticky yerine fixed */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--color-header-bg); /* Header için açık sarımsı krem */
+    color: var(--color-text-dark); /* Header yazıları koyu */
+    box-shadow: 0 2px 10px var(--color-shadow);
+    padding: 15px 0; /* Daha az padding */
+}
+
+header h1 {
+    font-family: 'Quicksand', sans-serif; /* Header'da da yeni font */
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: var(--color-accent-text); /* Navigasyon linkleri için koyu gri */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 20px; /* Yuvarlatılmış linkler */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-blue); /* Hover'da mavi */
+    color: var(--color-text-light); /* Hover'da yazı beyaz */
+    transform: translateY(-2px);
+}
+
+/* Container'lar */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden; 
+    flex-grow: 1; /* İçeriğin dikeyde yayılmasını sağlar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0; /* Container padding */
+}
+
+/* ======================================= */
+/* YENİ GENEL SECTION STİLLERİ */
+/* ======================================= */
+section {
+    background-color: var(--color-yellow-cream); /* Varsayılan section arka planı */
+    margin: 0; /* Scroll-snap için margin kaldırıldı */
+    border-radius: 0;
+    box-shadow: none;
+}
+#about { background-color: var(--color-pink); }
+#hobbies { background-color: var(--color-green); }
+#projects { background-color: var(--color-blue); }
+#cv { background-color: var(--color-pink); }
+#contact { background-color: var(--color-green); }
+
+
+section h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: var(--color-text-dark);
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    position: relative;
+    padding-top: 20px; /* Header altındaki içeriğe boşluk */
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px; /* Daha kısa çizgi */
+    height: 4px;
+    background: var(--color-accent-text); /* Koyu gri çizgi */
+    margin: 15px auto 0;
+    border-radius: 5px;
+}
+
+section h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: var(--color-accent-text);
+    font-size: 1.6em;
+    margin-top: 35px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-blue); /* Alt çizgi mavi */
+    padding-left: 0; /* Kaldırıldı */
+    border-left: none; /* Kaldırıldı */
+    text-align: center;
+}
+
+section p, section ul li {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+}
+
+/* ======================================= */
+/* GİRİŞ SAYFASI (#home) STİLİ - AYNI KALDI */
+/* ======================================= */
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/bodrum.jpg') no-repeat center center/cover;
+    color: var(--color-text-light);
+    box-shadow: none;
+    padding-top: 0; /* Header'ı dikkate almaz */
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.welcome-left {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.welcome-right {
+    max-width: 600px;
+}
+
+.small-profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--color-blue); /* Mavi çerçeve */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.small-profile-pic:hover {
+    transform: scale(1.05);
+}
+
+#home h2 {
+    font-size: 2.8em; /* Biraz küçültüldü */
+    color: var(--color-yellow-cream); /* Krem başlık */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    text-align: left;
+    margin-bottom: 15px;
+}
+#home h2::after {
+    margin-left: 0;
+    background: var(--color-yellow-cream);
+}
+
+#home p {
+    font-size: 1.1em;
+    color: var(--color-text-light);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+}
+
+.cta-links {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.cta-links a {
+    display: inline-block;
+    background: var(--color-blue); /* Mavi buton */
+    color: var(--color-text-light); 
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-right: 15px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px var(--color-shadow);
+}
+
+.cta-links a:hover {
+    background: #7DBFD4; /* Daha açık mavi */
+    transform: translateY(-2px);
+}
+
+/* ======================================= */
+/* HAKKIMDA STİLİ */
+/* ======================================= */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    background-color: var(--color-text-light); /* Beyaz kart */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px var(--color-shadow);
+}
+.about-content h3 {
+    border-bottom: 2px solid var(--color-pink); /* Pembe alt çizgi */
+    color: var(--color-accent-text);
+}
+
+
+/* ======================================= */
+/* HOBİLER (GALERİ) STİLİ - YENİ GRUPLAMA */
+/* ======================================= */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Daha büyük gruplar */
+    gap: 30px; /* Gruplar arası boşluk */
+    margin-top: 30px;
+}
+
+.hobbies-group {
+    background-color: var(--color-text-light); /* Beyaz kart */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px var(--color-shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hobbies-group h3 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--color-accent-text);
+    border-bottom: 2px solid var(--color-green); /* Yeşil alt çizgi */
+    padding-bottom: 10px;
+}
+
+.hobbies-group .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin-top: 0;
+    flex-grow: 1; /* Görsellerin dikeyde yayılmasını sağlar */
+    align-items: end; /* Görselleri alta hizalar */
+}
+
+.gallery figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: var(--color-pink); /* Fotoğraf kartlarının arka planı */
+    border-radius: 10px;
+    overflow: hidden; /* Taşmayı önler */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img {
+    width: 100%;
+    height: 120px; /* Daha küçük görseller */
+    object-fit: cover;
+    border-radius: 0; /* Figure'da yuvarlama olduğu için */
+    transition: transform 0.4s, box-shadow 0.4s;
+    border: none;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.gallery figcaption {
+    display: none; /* Başlıklar grup başlığında olduğu için kaldırıldı */
+}
+
+/* ======================================= */
+/* PROJELER VE CV STİLİ */
+/* ======================================= */
+#projects h3, .cv-area h3 {
+    border-bottom: 2px solid var(--color-blue); /* Mavi alt çizgi */
+    color: var(--color-accent-text);
+}
+
+#projects .container, #cv .container {
+    background-color: var(--color-text-light);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px var(--color-shadow);
+    padding: 40px;
+}
+
+
+/* Metin formatı düzenlemesi */
+.cv-area p.experience-title,
+.cv-area span.experience-date,
+#projects h3 {
+    font-weight: 600; /* Kalınlık ayarı */
+    color: var(--color-text-dark); /* Metin rengi */
+}
+.cv-area ul li, #projects p {
+    font-weight: 500;
+}
+.cv-area ul li ul li { /* İç içe liste elemanları */
+    font-weight: 400; /* Daha hafif */
+}
+
+/* Deneyim listesi için yeni stil */
+.clean-list {
+    list-style: none;
+    padding: 0;
+}
+.clean-list li {
+    margin-bottom: 10px;
+    margin-left: 0; /* Varsayılan liste işareti boşluğunu kaldır */
+}
+
+.experience-item {
+    background-color: var(--color-yellow-cream); /* Deneyim kartı arka planı */
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+    display: flex; /* Logo ve içeriği yan yana getirmek için */
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+.experience-item:hover {
+    transform: translateX(5px);
+}
+.experience-item > div {
+    flex-grow: 1;
+}
+
+
+.company-logo {
+    width: 45px; /* Logolar biraz büyütüldü */
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid var(--color-blue); 
+    padding: 3px;
+    background-color: var(--color-text-light); 
+    flex-shrink: 0;
+}
+.experience-title {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+.experience-date {
+    display: block;
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 5px;
+}
+.experience-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+.experience-item ul li {
+    font-size: 1em;
+    margin-bottom: 3px;
+}
+
+
+
+
+/* ======================================= */
+/* İLETİŞİM STİLİ */
+/* ======================================= */
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.contact-links li a {
+    /* Yazı rengini parlak pembe yap */
+    color: #FF69B4; /* Hot Pink */ 
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 20px;
+    /* Geçiş efektlerini koru */
+    transition: color 0.3s, background-color 0.3s, transform 0.2s;
+    /* Kenarlık rengini parlak pembe yap */
+    border: 2px solid #FF69B4; /* Hot Pink */
+}
+
+.contact-links li a:hover {
+    color: var(--color-text-light);
+    background-color: var(--color-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px var(--color-shadow);
+}
+
+/* OpenLayers Harita Konteyneri Stili */
+.map-container {
+    width: 100%;
+    max-width: 800px; 
+    height: 350px; /* Harita yüksekliği sabitlendi */
+    margin: 30px auto 0;
+    box-shadow: 0 4px 15px var(--color-shadow);
+    border-radius: 15px; /* Daha yuvarlak köşeler */
+    overflow: hidden;
+    border: 3px solid var(--color-blue); /* Mavi çerçeve */
+}
+
+/* Koordinat Gösterim Alanı Stili */
+.coordinate-display {
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: var(--color-blue);
+    color: var(--color-text-light);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 20px auto 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================================= */
+/* FOOTER STİLİ */
+/* ======================================= */
+footer {
+    background: var(--color-header-bg);
+    color: var(--color-text-dark);
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 10px var(--color-shadow);
+    font-weight: 500;
+    min-height: auto; /* Footer tam sayfa yüksekliğinde olmasın */
+    scroll-snap-align: end;
+}
+footer p {
+    margin: 0;
+}
+
+
+/* ======================================= */
+/* MOBİL UYUMLULUK */
+/* ======================================= */
+@media (max-width: 900px) {
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    .welcome-right {
+        text-align: center;
+    }
+    #home h2 {
+        text-align: center;
+        font-size: 2.2em;
+    }
+    #home h2::after {
+        margin-left: auto;
+    }
+    .cta-links {
+        text-align: center;
+    }
+    .cta-links a {
+        margin: 5px;
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    header .container > div {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    nav ul li a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+    section h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    section h3 {
+        font-size: 1.4em;
+    }
+    .hobbies-group h3 {
+        font-size: 1.6em;
+    }
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-links {
+        gap: 15px;
+    }
+    .map-container {
+        height: 250px;
+    }
+    #projects .container, #cv .container, .about-content {
+        padding: 20px;
+    }
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .company-logo {
+        margin-bottom: 5px;
+    }
+    .experience-title {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+    .about-content > div {
+        flex: 1;
+    }
+}
+
+/* ======================================= */
+/* SERTİFİKALAR LİSTE İYİLEŞTİRMESİ */
+/* ======================================= */
+
+.certificates-list-container {
+    padding: 10px 0;
+}
+
+.certificates-list-container h4 {
+    /* Başlık rengini ve kalınlığını ayarlayalım */
+    font-size: 1.35em;
+    font-weight: 700;
+    color: var(--color-accent-text); /* Koyu gri */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--color-blue); /* Mavi alt çizgi */
+    width: fit-content; /* Sadece başlık kadar çizgi */
+}
+
+ul.cert-list {
+    list-style-type: none; /* Varsayılan madde işaretini kaldır */
+    padding-left: 0;
+}
+
+ul.cert-list li {
+    position: relative;
+    padding-left: 25px; /* Madde işareti için boşluk */
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+ul.cert-list li::before {
+    content: '•'; /* Madde işareti olarak nokta kullan */
+    color: var(--color-blue); /* Nokta rengini mavi yap */
+    font-size: 1.5em; /* Daha büyük nokta */
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Dikeyde ortala */
+}
+
+ul.cert-list li:hover {
+    color: var(--color-blue); /* Hover'da yazıyı mavi yap */
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Sıla Cicili</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css" type="text/css">
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="full-page-snap">
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1 style="margin: 0; font-size: 1.8em;">Sıla Cicili</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="index.html#about">Hakkımda</a></li>
+                        <li><a href="hobbies.html">Hobiler</a></li>
+                        <li><a href="project.html">Projeler</a></li>
+                        <li><a href="cv.html">Deneyim</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="contact" class="page-section" style="background-color: var(--color-green);">
+        <div class="container">
+            <h2>İletişim</h2>
+            <p>Fikirlerinizi, işbirliği tekliflerinizi veya sorularınızı paylaşmak için bana ulaşın.</p>
+            <ul class="contact-links">
+                <li><a href="mailto:silacicili2003@hotmail.com">E-posta</a></li>
+                <li><a href="tel:05388273343">Telefon</a></li>
+                <li><a href="https://www.linkedin.com/in/s%C4%B1la-cicili-953258230/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/sila-cicili" target="_blank">GitHub</a></li>
+            </ul>
+
+            <h3 style="text-align: center; color: var(--color-text-dark); margin-top: 40px;">Konumum</h3>
+
+            <div id="map" class="map-container"></div>
+            
+            <div id="coordinate-output" class="coordinate-display">
+                Haritaya tıklayarak koordinatları görebilirsiniz.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sıla Cicili. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
