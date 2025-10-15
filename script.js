@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (mapElement) {
             
             // =======================================
-            // HARİTA AYARLARI BURADA BAŞLAR
+            // MAP SETTINGS START
             // =======================================
 
-            // 1. SABİT KONUMUNUZUN KOORDİNATLARI 
+            // 1. FIXED LOCATION COORDINATES (Example: Hacettepe University - Beytepe Campus)
             var fixedLonLat = [32.7485, 39.8660]; 
             var fixedPoint = ol.proj.fromLonLat(fixedLonLat);
 
-            // 2. Harita oluşturma
+            // 2. Map creation
             var map = new ol.Map({
                 target: 'map', 
                 layers: [
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
             });
             
-            // 3. SABİT İŞARETLEYİCİ (Marker) eklenmesi
+            // 3. Adding the FIXED MARKER
             var fixedMarker = new ol.Feature({
               geometry: new ol.geom.Point(fixedPoint)
             });
@@ -50,30 +50,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
             map.addLayer(vectorLayer);
             
-            // Koordinat Çıktı Alanını Güncelleme
+            // Updating the Coordinate Output Area
             var coordinateOutput = document.getElementById('coordinate-output');
 
-            // Başlangıçta sabit konumu göster
+            // Show initial fixed location
             var initialLon = fixedLonLat[0].toFixed(6);
             var initialLat = fixedLonLat[1].toFixed(6);
-            coordinateOutput.innerHTML = 'Sabit Konumum: <span style="font-weight: 700;">Boylam: ' + initialLon + '° / Enlem: ' + initialLat + '°</span>';
+            // METİN GÜNCELLENDİ
+            coordinateOutput.innerHTML = 'My Fixed Location: <span style="font-weight: 700;">Longitude: ' + initialLon + '° / Latitude: ' + initialLat + '°</span>';
 
-            // 4. TIKLAMA OLAYI VE KOORDİNAT GÖSTERİMİ
+            // 4. CLICK EVENT AND COORDINATE DISPLAY
             map.on('click', function (evt) {
                 var clickedCoord = evt.coordinate;
                 var lonLat = ol.proj.toLonLat(clickedCoord);
                 var lon = lonLat[0].toFixed(6);
                 var lat = lonLat[1].toFixed(6);
 
-                coordinateOutput.innerHTML = 'Tıklanan Koordinat: <span style="font-weight: 700; color: #FCF6BD;">Boylam: ' + lon + '° / Enlem: ' + lat + '°</span>';
+                // METİN GÜNCELLENDİ
+                coordinateOutput.innerHTML = 'Clicked Coordinate: <span style="font-weight: 700; color: #FCF6BD;">Longitude: ' + lon + '° / Latitude: ' + lat + '°</span>';
                 
+                // Show coordinates briefly
                 setTimeout(function() {
-                    coordinateOutput.innerHTML = 'Tıklanan Koordinat: <span style="font-weight: 700;">Boylam: ' + lon + '° / Enlem: ' + lat + '°</span>'; 
+                    // METİN GÜNCELLENDİ
+                    coordinateOutput.innerHTML = 'Clicked Coordinate: <span style="font-weight: 700;">Longitude: ' + lon + '° / Latitude: ' + lat + '°</span>'; 
                 }, 10); 
             });
 
             // =======================================
-            // HARİTA AYARLARI BURADA BİTER
+            // MAP SETTINGS END
             // =======================================
         } 
     } 
