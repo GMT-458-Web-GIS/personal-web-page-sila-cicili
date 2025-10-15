@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // =======================================
 
             // 1. FIXED LOCATION COORDINATES (Example: Hacettepe University - Beytepe Campus)
-            var fixedLonLat = [32.7485, 39.8660]; 
+            var fixedLonLat = [32.7351, 39.8665]; 
             var fixedPoint = ol.proj.fromLonLat(fixedLonLat);
 
             // 2. Map creation
