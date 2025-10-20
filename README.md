@@ -33,4 +33,5 @@ Google Gemini (Google AI) was utilized during the development process to resolve
 | **Profesyonel İçerik Geliştirme** | Portfolio texts were revised and translated into academic and industry-appropriate English (and Turkish), including accurately updating "Geodesy and Photogrammetry Engineering" to "Geomatics Engineering." | 30 Minutes |
 
 ### ⏱️ Total Estimated AI Usage Time
-Total estimated interaction time with AI: **1 Hour**
+
+Total estimated interaction time with AI, including **initial design consultation, debugging, and comprehensive content revision:** **1 Hour**
