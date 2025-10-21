@@ -4,18 +4,18 @@ Hacettepe University, Geomatics Engineering (4th Year)
 ---
 # GMT-458-Web-GIS/personal-web-page-sila-cicili 
 
-Bu depo, GitHub Classroom üzerinden oluşturulmuş **personal-web-page-sila-cicili** projesine aittir.
+This repository belongs to the **personal-web-page-sila-cicili** project, which was created via GitHub Classroom.
 
 ---
 
-## Proje Bağlantıları
+## Project Links
 
-Projenin canlı yayınlanmış sayfasına ve kaynak kodlarının bulunduğu ana depoya aşağıdaki bağlantılardan ulaşabilirsiniz:
+You can access the live published page of the project and the main repository containing the source code using the links below:
 
-| Bağlantı Tipi | Açıklama | URL |
+| Link Type | Description | URL |
 | :--- | :--- | :--- |
-| **Canlı Demo (IO Link)** | Projenin yayınlanmış web sayfası. | [https://sila-cicili.github.io/](https://sila-cicili.github.io/) |
-| **GitHub Ana Depo** | Projenin kaynak kodlarının bulunduğu ana sayfa. | [GMT-458-Web-GIS/personal-web-page-sila-cicili](https://github.com/GMT-458-Web-GIS/personal-web-page-sila-cicili) |
+| **Live Demo (IO Link)** | The published website of the project. | [https://sila-cicili.github.io/](https://sila-cicili.github.io/) |
+| **GitHub Main Repository** | The main page containing the project's source codes. | [GMT-458-Web-GIS/personal-web-page-sila-cicili](https://github.com/GMT-458-Web-GIS/personal-web-page-sila-cicili) |
 
 ---
 ## 🎯 Project Objectives and Requirement Fulfillment
