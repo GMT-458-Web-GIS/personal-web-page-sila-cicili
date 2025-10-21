@@ -2,7 +2,22 @@ Sıla Cicili
 Hacettepe University, Geomatics Engineering (4th Year)
 
 ---
+# GMT-458-Web-GIS/personal-web-page-sila-cicili 
 
+Bu depo, GitHub Classroom üzerinden oluşturulmuş **personal-web-page-sila-cicili** projesine aittir.
+
+---
+
+## Proje Bağlantıları
+
+Projenin canlı yayınlanmış sayfasına ve kaynak kodlarının bulunduğu ana depoya aşağıdaki bağlantılardan ulaşabilirsiniz:
+
+| Bağlantı Tipi | Açıklama | URL |
+| :--- | :--- | :--- |
+| **Canlı Demo (IO Link)** | Projenin yayınlanmış web sayfası. | [https://sila-cicili.github.io/](https://sila-cicili.github.io/) |
+| **GitHub Ana Depo** | Projenin kaynak kodlarının bulunduğu ana sayfa. | [GMT-458-Web-GIS/personal-web-page-sila-cicili](https://github.com/GMT-458-Web-GIS/personal-web-page-sila-cicili) |
+
+---
 ## 🎯 Project Objectives and Requirement Fulfillment
 
 This project successfully addresses all technical and structural requirements outlined in the course syllabus to demonstrate proficiency in HTML, CSS, and the OpenLayers library.
