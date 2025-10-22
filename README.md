@@ -39,13 +39,12 @@ This project successfully addresses all technical and structural requirements ou
 
 Google Gemini (Google AI) was utilized during the development process to resolve specific technical challenges and enhance the overall quality and professional presentation of the project. The AI functioned as a technical consultant and language editor.
 
-### Specific Technical and Mesleki Bilgiler Gained:
-
-| Topic/Area of Difficulty | Critical Learning Outcome Guided by AI | Estimated AI Time |
-| :--- | :--- | :--- |
-| **Dinamik JS Entegrasyonu (OpenLayers)** | **Problem:** Preventing the mapping library (`ol.js`), which is only loaded on one page (`contact.html`), from causing runtime JavaScript errors on other pages. **Solution:** Learned to implement a double-layered condition (`if (typeof ol !== 'undefined')` and `if (mapElement)`) in `script.js` to ensure code execution only when the library and DOM element are present, significantly improving application robustness. | 15 Minutes |
-| **Tarayıcı Hata Tespiti (Debugging)** | Understood that the critical `ERR_FILE_NOT_FOUND` error often stems from case-sensitivity issues between link paths (`href="project.html"`) and the actual file name on the operating system, reinforcing the importance of precise path management. | 15 Minutes |
-| **Profesyonel İçerik Geliştirme** | Portfolio texts were revised and translated into academic and industry-appropriate English (and Turkish), including accurately updating "Geodesy and Photogrammetry Engineering" to "Geomatics Engineering." | 30 Minutes |
+### Specific Technical Knowledge Gained
+| Topic / Challenge | Learning Outcome Guided by AI | Estimated AI Time |
+|--------------------|-------------------------------|-------------------|
+| **Dynamic JS Integration (OpenLayers)** | Learned how to prevent `ol.js` runtime errors on non-map pages using dual conditional checks (`if (typeof ol !== 'undefined')` and `if (mapElement)`). This significantly improved code robustness. | 15 min |
+| **Browser Debugging** | Understood that the `ERR_FILE_NOT_FOUND` error often results from case sensitivity issues in file paths, emphasizing accurate path management. | 15 min |
+| **Professional Content Development** | Revised and translated portfolio content into academic-level English, updating terminologies such as *Geodesy and Photogrammetry Engineering* → *Geomatics Engineering*. | 30 min |
 
 ### ⏱️ Total Estimated AI Usage Time
 
